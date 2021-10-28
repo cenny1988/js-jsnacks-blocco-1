@@ -1,15 +1,31 @@
 /*
-1 - L’utente inserisce due numeri in successione, con due prompt.
-Il software stampa il maggiore.
+4 - In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
 */
 
-let x = parseInt(prompt('Inserisci il primo numero x: '));
-let y = parseInt(prompt('Inserisci il secondo numero y: '));
+// creiamo un array mockup con i nomi degli invitati
+let invitati = [
+    'Mario',
+    'Paolo',
+    'Gennaro',
+    'Riccardo',
+    'Giovanni',
+    'Valentina',
+    'Maria',
+    'Nicole',
+    'Jasmine'
+];
 
-if (x>y){
-    console.log('Il numero maggiore è x; ',x);
-} else if (x<y){
-    console.log('Il numero maggiore è y; ',y);
-} else {
-    console.log('I numeri sono uguali');
+// chiediamo all'utente il suo nome
+let userName = prompt('Inserisci il tuo nome');
+let userVerifed = false;
+// se il nome inserito è nella lista dei nomi dell'array iniziale allora l'utente partecipa altrimenti no.
+for ( i=0; i<invitati.length; i++){
+    if (invitati[i] === userName){
+        userVerifed = true;
+        console.log(`Benvenuto ${userName}, sei in lista Complimenti.`);
+    }
 }
+
+if (!userVerifed){
+    console.log(`Mi dispiace ${userName}, NON sei in lista!`);
+};
