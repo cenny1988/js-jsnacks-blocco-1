@@ -1,15 +1,16 @@
 /*
-1 - L’utente inserisce due numeri in successione, con due prompt.
-Il software stampa il maggiore.
+5 - Crea un array vuoto.
+Chiedi per 6 volte all’utente di inserire un numero,
+se è dispari inseriscilo nell’array.
 */
 
-let x = parseInt(prompt('Inserisci il primo numero x: '));
-let y = parseInt(prompt('Inserisci il secondo numero y: '));
+let arrDispari = [];
 
-if (x>y){
-    console.log('Il numero maggiore è x; ',x);
-} else if (x<y){
-    console.log('Il numero maggiore è y; ',y);
-} else {
-    console.log('I numeri sono uguali');
+for ( i=0; i<6; i++){
+    let numUser = parseInt(prompt(`Inserisci il numero ${i+1}: `));
+    if (numUser % 2 != 0){
+        arrDispari.push(numUser);
+    }
 }
+
+console.log("L'array finale è: ", arrDispari);
