@@ -1,15 +1,13 @@
 /*
-1 - L’utente inserisce due numeri in successione, con due prompt.
-Il software stampa il maggiore.
+3 - Il software deve chiedere per 10 volte all’utente di inserire un numero.
+Il programma stampa la somma di tutti i numeri inseriti.
 */
 
-let x = parseInt(prompt('Inserisci il primo numero x: '));
-let y = parseInt(prompt('Inserisci il secondo numero y: '));
-
-if (x>y){
-    console.log('Il numero maggiore è x; ',x);
-} else if (x<y){
-    console.log('Il numero maggiore è y; ',y);
-} else {
-    console.log('I numeri sono uguali');
+//creiamo un ciclo dove chiediamo all'utente di inserire 10 numeri
+//e nel frattempo sommiamo questi numeri in un contatore
+let tot = 0;
+for( i=0; i<10; i++){
+    tot += parseInt(prompt(`Inesrisci il numero ${i+1} :`));
 }
+//stampiamo il totale del contatore
+console.log('La somma totale dei numeri inseriti è: ',tot);
